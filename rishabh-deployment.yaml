@@ -1,1 +1,27 @@
 
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: rishabh-webapp
+  name: rishabh-webapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: rishabh-webapp
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: rishabh-webapp
+    spec:
+      containers:
+      - image: rishu73/rishabhciscoapp:v0022
+        name: rishabhciscoapp
+        ports:
+        - containerPort: 80
+        resources: {}
+status: {}
