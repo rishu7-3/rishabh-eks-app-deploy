@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: rishabh-app-day5
+  name: rishabh-app-day5
+  namespace: rishabh-space
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: rishabh-app-day5
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: rishabh-app-day5
+    spec:
+      containers:
+      - image: rishu73/rishabhciscoapp:v0011
+        name: rishabhciscoapp
+        ports:
+        - containerPort: 80
+        resources: {}
+        imagePullPolicy : always
+status: {}
